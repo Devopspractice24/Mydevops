@@ -30,7 +30,8 @@ stages:
     vmImage: 'ubuntu-latest'
   variables:
     - group: Dev-Deploy-Group
-      deployment: DeployInfrastructure
+  jobs:
+    - deployment: DeployInfrastructure
       displayName: 'Deploy ARM template'
       environment: Dev
       strategy:
